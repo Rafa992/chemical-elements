@@ -1,0 +1,23 @@
+@import '@/assets/main.scss'; 
+
+.main {
+    padding: 20px !important; 
+    height: 80vh !important;
+    display: flex !important;
+    flex-direction: column;
+    padding-top: 75px !important;
+    align-items: center !important;
+    position: relative;
+    &_button {
+        width: 200px;
+        background: var(--baseColor) !important;
+        color: var(--whiteTextColor) !important;
+        margin-top: 20px !important;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        @include media(400){
+            font-size: 12px !important;
+            width: 150px !important;
+        }
+    }
+}

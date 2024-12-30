@@ -1,0 +1,9 @@
+@import '@/assets/main.scss';
+
+.snackbar {
+    &_text {
+        @include media(500){
+            font-size: 13px !important;
+        }
+    }
+}
