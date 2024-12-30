@@ -8,8 +8,8 @@ import {
 import { getNewTokens } from '@/services/auth-token.service'
 
 const options = {
-  // baseURL: process.env.BASE_URL || 'https://english-words-api-3l2i.onrender.com/api',
-  baseURL: 'http://localhost:4000/api',
+  baseURL: process.env.BASE_URL || 'https://chemical-elements-api.onrender.com/api',
+  // baseURL: 'http://localhost:4000/api',
   Headers: {
     'Content-Type': 'application/json'
   },
