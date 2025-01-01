@@ -13,7 +13,7 @@ export default function InfoButton() {
   const showTranslation = useAppSelector(selectShowTranslation);
 
   const style =
-    user.laterality === "right" ? { right: "30px" } : { left: "30px" };
+    user.laterality === "right" ? { right: "100px" } : { left: "100px" };
 
     const handleClick = ()=> {
         dispatch(setIncrease(false));

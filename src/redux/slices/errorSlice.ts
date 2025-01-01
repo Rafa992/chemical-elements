@@ -5,12 +5,14 @@ interface IInitialState {
   errorStatus: boolean;
   errorMessage: string;
   severity: "error" | "success" | "warning" | "info";
+  time: number;
 }
 
 const initialState: IInitialState = {
   errorStatus: false,
   errorMessage: "",
   severity: "info",
+  time: 3000,
 };
 
 const errorSlice = createSlice({
@@ -22,6 +24,9 @@ const errorSlice = createSlice({
     },
     setErrorMessage: (state, action: PayloadAction<string>) => {
       state.errorMessage = action.payload;
+    },
+    setTime: (state, action: PayloadAction<number>) => {
+      state.time = action.payload;
     },
     setSeverity: (
       state,
@@ -37,7 +42,8 @@ export const selectErrorStatus = (state: RootState): boolean =>
 export const selectErrorMessage = (state: RootState): string =>
   state.errorReducer.errorMessage;
 export const selectSeverity = (state: RootState) => state.errorReducer.severity;
+export const selectTime = (state: RootState) => state.errorReducer.time;
 
-export const { setErrorStatus, setErrorMessage, setSeverity } =
+export const { setErrorStatus, setErrorMessage, setSeverity, setTime } =
   errorSlice.actions;
 export default errorSlice.reducer;

@@ -18,7 +18,7 @@ export default function useProfile() {
               dispatch(setUser(profile));
               dispatch(setCurrentRange(profile.currentRange));
               getAllWords();
-              initialError(true, 'Профиль успешно загружен', 'success');
+              initialError(true, 'Профиль успешно загружен', 'success', 1500);
             }
         } catch (error) {
             initialError(true, 'Ошибка профиля', 'error');

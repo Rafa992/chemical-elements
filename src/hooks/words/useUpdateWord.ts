@@ -34,7 +34,7 @@ export default function useUpdateWord() {
       dispatch(setUnlearnedWords(newUnlearnedWords));
 
       const res = await axiosWithAuth.put("/chemical-elements/edit-element", newWord);
-      initialError(true, '', 'success');
+      initialError(true, '', 'success', 500);
       return res.data;
     } catch (error) {
       console.log("error changing data word", error);

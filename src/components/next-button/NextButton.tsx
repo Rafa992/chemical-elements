@@ -24,7 +24,7 @@ export default function NextButton() {
   const updateCard = useAppSelector(selectUpdateCard);
 
   const style =
-    user.laterality === "right" ? { left: "30px" } : { right: "30px" };
+    user.laterality === "right" ? { right: "30px" } : { left: "30px" };
 
   const handleClick = () => {
     randomWord();

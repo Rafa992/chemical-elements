@@ -3,6 +3,7 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import {authApi} from '../api/auth.api'
 import colorSlice from "./slices/colorSlice";
 import errorSlice from "./slices/errorSlice";
+import loaderSlice from "./slices/loaderSlice";
 import modalSlice from "./slices/modalSlice";
 import userSlice from "./slices/userSlice";
 import wordsSlice from "./slices/wordsSlice";
@@ -14,6 +15,7 @@ const store = configureStore({
         modalReducer: modalSlice,
         errorReducer: errorSlice,
         colorReducer: colorSlice,
+        loaderReducer: loaderSlice,
         [authApi.reducerPath]: authApi.reducer
     },
     middleware: (getDefaultMiddleware)=> getDefaultMiddleware().concat(authApi.middleware) 
